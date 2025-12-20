@@ -3,46 +3,100 @@ using UnityEngine;
 
 public class Paintable : MonoBehaviour
 {
+    private enum PaintCoverageMode { Partial, Full }
+
+    [Header("Renderer")]
     [SerializeField] private Renderer myRenderer;
-    [SerializeField] private Color paintColour = Color.gray5;
+
+    [Header("Paint Settings")]
+    [SerializeField] private PaintCoverageMode paintCoverageMode = PaintCoverageMode.Partial;
+    [SerializeField, Range(0, 1)] private float fullPaintCoverage = 1f;
+    [SerializeField, Range(0, 1)] private float partialPaintCoverage = 0.3f;
+
+    [Header("State")]
+    [SerializeField] private Color paintColour = Color.gray;
     [SerializeField] private bool enableSetColour = true;
 
-    private Color oldColour = Color.gray5;
+    private Color oldColour;
+    private MaterialPropertyBlock mpb;
 
     public Action OnColourChange;
 
-    public Color PaintColour
-    {
-        get { return paintColour; }
-    }
+    public Color PaintColour => paintColour;
+
+    private static readonly int PaintEnabledID = Shader.PropertyToID("_PaintEnabled");
+    private static readonly int PaintColorID = Shader.PropertyToID("_PaintColor");
+    private static readonly int PaintCoverageID = Shader.PropertyToID("_PaintCoverage");
 
     private void Awake()
     {
-        paintColour = myRenderer.material.color;
-        oldColour = paintColour;
+        ApplyPaintWithMPB();
     }
 
-    public void SetColour(Color newColour)
+    public void Paint(Color newColour)
     {
         if (!enableSetColour) return;
 
         oldColour = paintColour;
         paintColour = newColour;
-        myRenderer.material.color = newColour;
 
         if (paintColour != oldColour)
         {
+            ApplyPaintRuntime();
             OnColourChange?.Invoke();
         }
     }
 
-    public void EnableSetColour()
+    public void ErasePaint()
     {
-        enableSetColour = true;
+        if (mpb == null)
+            mpb = new MaterialPropertyBlock();
+
+        myRenderer.GetPropertyBlock(mpb);
+        mpb.SetFloat(PaintEnabledID, 0f);
+        mpb.SetColor(PaintColorID, Color.gray);
+        myRenderer.SetPropertyBlock(mpb);
     }
 
-    public void DisableSetColour()
+    private void ApplyPaintRuntime()
     {
-        enableSetColour = false;
+        ApplyPaintWithMPB();
     }
+
+    private void ApplyPaintWithMPB()
+    {
+        if (myRenderer == null) return;
+        if (mpb == null)
+        {
+            mpb = new MaterialPropertyBlock();
+        }
+
+        float coverage;
+
+        switch (paintCoverageMode)
+        {
+            case PaintCoverageMode.Partial:
+                coverage = partialPaintCoverage;
+                break;
+            default:
+                coverage = fullPaintCoverage;
+                break;
+        }
+
+        myRenderer.GetPropertyBlock(mpb);
+
+        mpb.SetFloat(PaintCoverageID, coverage);
+        mpb.SetColor(PaintColorID, paintColour);
+        mpb.SetFloat(PaintEnabledID, 1f);
+
+        myRenderer.SetPropertyBlock(mpb);
+    }
+
+    private void OnValidate()
+    {
+        ApplyPaintWithMPB();
+    }
+
+    public void EnableSetColour() => enableSetColour = true;
+    public void DisableSetColour() => enableSetColour = false;
 }

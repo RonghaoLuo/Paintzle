@@ -26,7 +26,7 @@ public class Paintball : Projectile
             }
             if (paintable != null)
             {
-                paintable.SetColour(paintColor);
+                paintable.Paint(paintColor);
             }
 
 
