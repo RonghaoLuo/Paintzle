@@ -14,6 +14,7 @@ public class Paintable : MonoBehaviour
     [SerializeField, Range(0, 1)] private float partialPaintCoverage = 0.3f;
 
     [Header("State")]
+    [SerializeField] private bool isPainted = false;
     [SerializeField] private Color paintColour = Color.gray;
     [SerializeField] private bool enableSetColour = true;
 
@@ -23,6 +24,7 @@ public class Paintable : MonoBehaviour
     public Action OnColourChange;
 
     public Color PaintColour => paintColour;
+    public bool IsPainted => isPainted;
 
     private static readonly int PaintEnabledID = Shader.PropertyToID("_PaintEnabled");
     private static readonly int PaintColorID = Shader.PropertyToID("_PaintColor");
@@ -30,13 +32,13 @@ public class Paintable : MonoBehaviour
 
     private void Awake()
     {
-        ApplyPaintWithMPB();
+        ApplyMPB();
     }
 
     public void Paint(Color newColour)
     {
         if (!enableSetColour) return;
-
+        isPainted = true;
         oldColour = paintColour;
         paintColour = newColour;
 
@@ -52,6 +54,7 @@ public class Paintable : MonoBehaviour
         if (mpb == null)
             mpb = new MaterialPropertyBlock();
 
+        isPainted = false;
         myRenderer.GetPropertyBlock(mpb);
         mpb.SetFloat(PaintEnabledID, 0f);
         mpb.SetColor(PaintColorID, Color.gray);
@@ -61,6 +64,35 @@ public class Paintable : MonoBehaviour
     private void ApplyPaintRuntime()
     {
         ApplyPaintWithMPB();
+    }
+
+    private void ApplyMPB()
+    {
+        if (myRenderer == null) return;
+        if (mpb == null)
+        {
+            mpb = new MaterialPropertyBlock();
+        }
+
+        float coverage;
+
+        switch (paintCoverageMode)
+        {
+            case PaintCoverageMode.Partial:
+                coverage = partialPaintCoverage;
+                break;
+            default:
+                coverage = fullPaintCoverage;
+                break;
+        }
+
+        myRenderer.GetPropertyBlock(mpb);
+
+        mpb.SetFloat(PaintCoverageID, coverage);
+        mpb.SetColor(PaintColorID, paintColour);
+        mpb.SetFloat(PaintEnabledID, isPainted ? 1f : 0f);
+
+        myRenderer.SetPropertyBlock(mpb);
     }
 
     private void ApplyPaintWithMPB()
@@ -94,7 +126,7 @@ public class Paintable : MonoBehaviour
 
     private void OnValidate()
     {
-        ApplyPaintWithMPB();
+        ApplyMPB();
     }
 
     public void EnableSetColour() => enableSetColour = true;
