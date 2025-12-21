@@ -69,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 9467bad956dece0469db35671418a858, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -127,6 +127,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Paintable
   myRenderer: {fileID: 3947724335471831740}
+  paintCoverageMode: 0
+  fullPaintCoverage: 1
+  partialPaintCoverage: 0.3
+  isPainted: 0
   paintColour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   enableSetColour: 1
 --- !u!114 &5331834150454883038

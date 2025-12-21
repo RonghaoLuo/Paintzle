@@ -15,7 +15,7 @@ public class Paintable : MonoBehaviour
 
     [Header("State")]
     [SerializeField] private bool isPainted = false;
-    [SerializeField] private Color paintColour = Color.gray;
+    [SerializeField] private Color paintColour = Color.gray5;
     [SerializeField] private bool enableSetColour = true;
 
     private Color oldColour;
@@ -51,14 +51,23 @@ public class Paintable : MonoBehaviour
 
     public void ErasePaint()
     {
+        if (!enableSetColour) return;
         if (mpb == null)
             mpb = new MaterialPropertyBlock();
 
         isPainted = false;
+        oldColour = paintColour;
+        paintColour = Color.gray5;
+
         myRenderer.GetPropertyBlock(mpb);
         mpb.SetFloat(PaintEnabledID, 0f);
-        mpb.SetColor(PaintColorID, Color.gray);
+        mpb.SetColor(PaintColorID, Color.gray5);
         myRenderer.SetPropertyBlock(mpb);
+
+        if (paintColour != oldColour)
+        {
+            OnColourChange?.Invoke();
+        }
     }
 
     private void ApplyPaintRuntime()

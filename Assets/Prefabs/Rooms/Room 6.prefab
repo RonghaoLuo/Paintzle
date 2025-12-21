@@ -20,6 +20,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1836696677524634839, guid: 63d663531c8ac7b47ac782aa0056ec27, type: 3}
+      propertyPath: paintColour.b
+      value: 0.2784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836696677524634839, guid: 63d663531c8ac7b47ac782aa0056ec27, type: 3}
+      propertyPath: paintColour.g
+      value: 0.3882353
+      objectReference: {fileID: 0}
     - target: {fileID: 2641831364342748759, guid: 63d663531c8ac7b47ac782aa0056ec27, type: 3}
       propertyPath: correctColour.b
       value: 0.2784314
@@ -28,10 +36,18 @@ PrefabInstance:
       propertyPath: correctColour.g
       value: 0.3882353
       objectReference: {fileID: 0}
-    - target: {fileID: 3068036400049160561, guid: 63d663531c8ac7b47ac782aa0056ec27, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 5bd731d2f96d4844693de44c785c834a, type: 2}
+    - target: {fileID: 3546009141593063090, guid: 63d663531c8ac7b47ac782aa0056ec27, type: 3}
+      propertyPath: paintColour.b
+      value: 0.54901963
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546009141593063090, guid: 63d663531c8ac7b47ac782aa0056ec27, type: 3}
+      propertyPath: paintColour.g
+      value: 0.93333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546009141593063090, guid: 63d663531c8ac7b47ac782aa0056ec27, type: 3}
+      propertyPath: paintColour.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4028239377058374908, guid: 63d663531c8ac7b47ac782aa0056ec27, type: 3}
       propertyPath: toBePaintedOnComplete.Array.data[0].colour.b
       value: 0.54901963
@@ -52,10 +68,18 @@ PrefabInstance:
       propertyPath: toBePaintedOnComplete.Array.data[1].colour.g
       value: 0.3882353
       objectReference: {fileID: 0}
-    - target: {fileID: 7493058570823409273, guid: 63d663531c8ac7b47ac782aa0056ec27, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 4663e078c1e6379428b58746ee05c6b7, type: 2}
+    - target: {fileID: 6057950824250270687, guid: 63d663531c8ac7b47ac782aa0056ec27, type: 3}
+      propertyPath: paintColour.b
+      value: 0.54901963
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057950824250270687, guid: 63d663531c8ac7b47ac782aa0056ec27, type: 3}
+      propertyPath: paintColour.g
+      value: 0.93333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057950824250270687, guid: 63d663531c8ac7b47ac782aa0056ec27, type: 3}
+      propertyPath: paintColour.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7601039341958179692, guid: 63d663531c8ac7b47ac782aa0056ec27, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -140,10 +164,6 @@ PrefabInstance:
       propertyPath: toBePaintedOnComplete.Array.data[1].colour.g
       value: 0.3882353
       objectReference: {fileID: 0}
-    - target: {fileID: 8248648461562630098, guid: 63d663531c8ac7b47ac782aa0056ec27, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 4663e078c1e6379428b58746ee05c6b7, type: 2}
     - target: {fileID: 9029816138001145455, guid: 63d663531c8ac7b47ac782aa0056ec27, type: 3}
       propertyPath: m_text
       value: Again? Wait, but there's no grabbable blocks in THIS room...

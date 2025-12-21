@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8911290297260655753
+--- !u!1 &6300454189892846929
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,51 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6403822452733915349}
-  - component: {fileID: 2481671264245583126}
-  - component: {fileID: 7332445818175551082}
-  - component: {fileID: 8640815420042304002}
-  - component: {fileID: -6094168573340683776}
-  - component: {fileID: 4849237106620183683}
+  - component: {fileID: 1617372084312874076}
+  - component: {fileID: 6108767960301921585}
+  - component: {fileID: 707750547005360604}
+  - component: {fileID: 3598797168324692288}
+  - component: {fileID: 3311401395903784252}
   m_Layer: 0
-  m_Name: Waffle_
+  m_Name: wallCorridor Bend_90
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!4 &6403822452733915349
+--- !u!4 &1617372084312874076
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8911290297260655753}
+  m_GameObject: {fileID: 6300454189892846929}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 30, y: 30, z: 30}
-  m_ConstrainProportionsScale: 1
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: -7.63, y: 0, z: 6.36}
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2481671264245583126
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
+--- !u!33 &6108767960301921585
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8911290297260655753}
-  m_Mesh: {fileID: -7067704642897139685, guid: 518e6c8c60816b94e9f0eb7704840e9a, type: 3}
---- !u!23 &7332445818175551082
+  m_GameObject: {fileID: 6300454189892846929}
+  m_Mesh: {fileID: -1514047358658317396, guid: 08079b28155d34f4db094d8460218965, type: 3}
+--- !u!23 &707750547005360604
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8911290297260655753}
+  m_GameObject: {fileID: 6300454189892846929}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 2
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -69,7 +68,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 33c37ae9cf9c0164f8d98ad49a77dd25, type: 2}
+  - {fileID: 2100000, guid: 9467bad956dece0469db35671418a858, type: 2}
+  - {fileID: 2100000, guid: 9724262729d4e614bb755435e4a38be9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92,13 +92,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8640815420042304002
-BoxCollider:
+--- !u!64 &3598797168324692288
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8911290297260655753}
+  m_GameObject: {fileID: 6300454189892846929}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -110,37 +110,26 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.17656918, y: 0.0078874575, z: 0.17656918}
-  m_Center: {x: 0, y: 0.0039437287, z: 0}
---- !u!114 &-6094168573340683776
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1514047358658317396, guid: 08079b28155d34f4db094d8460218965, type: 3}
+--- !u!114 &3311401395903784252
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8911290297260655753}
+  m_GameObject: {fileID: 6300454189892846929}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c879870aac209b4381c786b2b4f6417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Paintable
-  myRenderer: {fileID: 7332445818175551082}
+  myRenderer: {fileID: 707750547005360604}
+  paintCoverageMode: 0
+  fullPaintCoverage: 1
+  partialPaintCoverage: 0.3
+  isPainted: 0
   paintColour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   enableSetColour: 1
---- !u!114 &4849237106620183683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8911290297260655753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e79a54c0c2151724996da6df64af9005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StaticPaintableDetector
-  correctColour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  output: 0
-  paintable: {fileID: -6094168573340683776}
-  detectForAnyColour: 1

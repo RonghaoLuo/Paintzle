@@ -822,6 +822,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5267818159662880082}
     m_Modifications:
+    - target: {fileID: 5648198726174752047, guid: a7f487beef05846459224465b0158ff7, type: 3}
+      propertyPath: isPainted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648198726174752047, guid: a7f487beef05846459224465b0158ff7, type: 3}
+      propertyPath: paintColour.b
+      value: 0.54901963
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648198726174752047, guid: a7f487beef05846459224465b0158ff7, type: 3}
+      propertyPath: paintColour.g
+      value: 0.93333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648198726174752047, guid: a7f487beef05846459224465b0158ff7, type: 3}
+      propertyPath: paintColour.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648198726174752047, guid: a7f487beef05846459224465b0158ff7, type: 3}
+      propertyPath: enableSetColour
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8337997537850546095, guid: a7f487beef05846459224465b0158ff7, type: 3}
       propertyPath: correctColour.b
       value: 0.54901963
@@ -878,10 +898,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 9046876148653179017, guid: a7f487beef05846459224465b0158ff7, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 4663e078c1e6379428b58746ee05c6b7, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -911,6 +927,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5267818159662880082}
     m_Modifications:
+    - target: {fileID: 5648198726174752047, guid: a7f487beef05846459224465b0158ff7, type: 3}
+      propertyPath: isPainted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648198726174752047, guid: a7f487beef05846459224465b0158ff7, type: 3}
+      propertyPath: paintColour.b
+      value: 0.81960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648198726174752047, guid: a7f487beef05846459224465b0158ff7, type: 3}
+      propertyPath: paintColour.g
+      value: 0.80784315
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648198726174752047, guid: a7f487beef05846459224465b0158ff7, type: 3}
+      propertyPath: paintColour.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648198726174752047, guid: a7f487beef05846459224465b0158ff7, type: 3}
+      propertyPath: enableSetColour
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8337997537850546095, guid: a7f487beef05846459224465b0158ff7, type: 3}
       propertyPath: correctColour.b
       value: 0.81960785
@@ -967,10 +1003,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 9046876148653179017, guid: a7f487beef05846459224465b0158ff7, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: ff82ee36f8f8e3a4faa9d83be09e41d8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -19,7 +19,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7775324418846074507
 Transform:
@@ -69,8 +69,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 33c37ae9cf9c0164f8d98ad49a77dd25, type: 2}
-  - {fileID: 2100000, guid: ff4d793cdb8145b49bf87d10ab852f94, type: 2}
+  - {fileID: 2100000, guid: 15797caca0874344ab2e42855707b1fd, type: 2}
+  - {fileID: 2100000, guid: cb5712a45fd9ec345b502143a2d922b8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -129,6 +129,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Paintable
   myRenderer: {fileID: 2335937895573002331}
+  paintCoverageMode: 0
+  fullPaintCoverage: 1
+  partialPaintCoverage: 0.3
+  isPainted: 0
   paintColour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   enableSetColour: 1
 --- !u!114 &3151483258231063319

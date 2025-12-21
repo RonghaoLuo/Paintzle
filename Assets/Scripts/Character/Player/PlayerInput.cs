@@ -15,6 +15,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private MouseClickStrategy currentMouseClickStrategy;
     [SerializeField] private CommandGiver commandGiver;
     [SerializeField] private PaintInventory paintInventory;
+    [SerializeField] private PlayerErase erase;
 
     private float scrollInput;
 
@@ -124,6 +125,11 @@ public class PlayerInput : MonoBehaviour
         //{
         //    CollectionManager.Instance.TrySpawnPowerUp(transform.position + transform.forward * 3);
         //}
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            erase.ErasePaint();
+        }
         #endregion
     }
 }

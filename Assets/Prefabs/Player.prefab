@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 7932446350015283606}
   - component: {fileID: 1198976141722156847}
   - component: {fileID: 1304978640704101914}
+  - component: {fileID: 7438105287410212691}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -260,6 +261,7 @@ MonoBehaviour:
   currentMouseClickStrategy: {fileID: 0}
   commandGiver: {fileID: 7932446350015283606}
   paintInventory: {fileID: 1198976141722156847}
+  erase: {fileID: 7438105287410212691}
   speed: 0
   size: 0
   effectRadius: 0
@@ -418,6 +420,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCollect
   shoot: {fileID: 1136045410094225472}
   jump: {fileID: 3479712109852942294}
+--- !u!114 &7438105287410212691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5382061451887235705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04dd6d5aa7d28d84aa8514c7944c9f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerErase
+  origin: {fileID: 3709316228344842269}
 --- !u!1 &6168268049458722360
 GameObject:
   m_ObjectHideFlags: 0

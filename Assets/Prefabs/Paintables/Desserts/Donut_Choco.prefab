@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3206474060948352572
+--- !u!1 &1318964030067854352
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1767442492477532898}
-  - component: {fileID: 8420077221772946038}
-  - component: {fileID: 628475730101566039}
-  - component: {fileID: 6026469760475631485}
-  - component: {fileID: 6040797796982635644}
-  - component: {fileID: 7211187791425683297}
+  - component: {fileID: 2356662915339244918}
+  - component: {fileID: 695567239852600656}
+  - component: {fileID: 3171391556333855042}
+  - component: {fileID: 3254591532586699136}
+  - component: {fileID: 4121223812898191092}
+  - component: {fileID: 5078833145509813284}
   m_Layer: 0
-  m_Name: "Stick_\u0130cecream"
+  m_Name: Donut_Choco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!4 &1767442492477532898
+--- !u!4 &2356662915339244918
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3206474060948352572}
+  m_GameObject: {fileID: 1318964030067854352}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 80, y: 80, z: 80}
+  m_LocalScale: {x: 50, y: 50, z: 50}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8420077221772946038
+--- !u!33 &695567239852600656
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3206474060948352572}
-  m_Mesh: {fileID: 3606954898195696455, guid: 518e6c8c60816b94e9f0eb7704840e9a, type: 3}
---- !u!23 &628475730101566039
+  m_GameObject: {fileID: 1318964030067854352}
+  m_Mesh: {fileID: 2188243859616755906, guid: 518e6c8c60816b94e9f0eb7704840e9a, type: 3}
+--- !u!23 &3171391556333855042
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3206474060948352572}
+  m_GameObject: {fileID: 1318964030067854352}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -69,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 33c37ae9cf9c0164f8d98ad49a77dd25, type: 2}
+  - {fileID: 2100000, guid: 15797caca0874344ab2e42855707b1fd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92,13 +92,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6026469760475631485
+--- !u!65 &3254591532586699136
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3206474060948352572}
+  m_GameObject: {fileID: 1318964030067854352}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -111,30 +111,34 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.017451629, y: 0.11537895, z: 0.04470137}
-  m_Center: {x: -0.00000025937334, y: 0.057761703, z: -0.00000008940697}
---- !u!114 &6040797796982635644
+  m_Size: {x: 0.181317, y: 0.08182364, z: 0.18505922}
+  m_Center: {x: 0.0013944469, y: 0.03991651, z: -0.00059588253}
+--- !u!114 &4121223812898191092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3206474060948352572}
+  m_GameObject: {fileID: 1318964030067854352}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c879870aac209b4381c786b2b4f6417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Paintable
-  myRenderer: {fileID: 628475730101566039}
+  myRenderer: {fileID: 3171391556333855042}
+  paintCoverageMode: 0
+  fullPaintCoverage: 1
+  partialPaintCoverage: 0.3
+  isPainted: 0
   paintColour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   enableSetColour: 1
---- !u!114 &7211187791425683297
+--- !u!114 &5078833145509813284
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3206474060948352572}
+  m_GameObject: {fileID: 1318964030067854352}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e79a54c0c2151724996da6df64af9005, type: 3}
@@ -142,5 +146,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StaticPaintableDetector
   correctColour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   output: 0
-  paintable: {fileID: 6040797796982635644}
+  paintable: {fileID: 4121223812898191092}
   detectForAnyColour: 1

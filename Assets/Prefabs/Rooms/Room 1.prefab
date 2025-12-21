@@ -8,10 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2614148035902526967}
     m_Modifications:
-    - target: {fileID: 3008326661244686940, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: ff82ee36f8f8e3a4faa9d83be09e41d8, type: 2}
     - target: {fileID: 3530188839529917295, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: correctColour.b
       value: 0.81960785
@@ -84,6 +80,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Static Paintable Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: isPainted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: paintColour.b
+      value: 0.81960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: paintColour.g
+      value: 0.80784315
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: paintColour.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: enableSetColour
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -113,10 +129,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2614148035902526967}
     m_Modifications:
-    - target: {fileID: 3008326661244686940, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: ff82ee36f8f8e3a4faa9d83be09e41d8, type: 2}
     - target: {fileID: 3530188839529917295, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: correctColour.b
       value: 0.81960785
@@ -188,6 +200,26 @@ PrefabInstance:
     - target: {fileID: 5959865650345884192, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: m_Name
       value: Static Paintable Cube (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: isPainted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: paintColour.b
+      value: 0.81960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: paintColour.g
+      value: 0.80784315
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: paintColour.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: enableSetColour
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -320,10 +352,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2614148035902526967}
     m_Modifications:
-    - target: {fileID: 3008326661244686940, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 5bd731d2f96d4844693de44c785c834a, type: 2}
     - target: {fileID: 3530188839529917295, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: correctColour.b
       value: 0.2784314
@@ -397,8 +425,24 @@ PrefabInstance:
       value: Static Paintable Cube (2)
       objectReference: {fileID: 0}
     - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
-      propertyPath: enableSetColour
+      propertyPath: isPainted
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: paintColour.b
+      value: 0.2784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: paintColour.g
+      value: 0.3882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: paintColour.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: enableSetColour
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -600,10 +644,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2614148035902526967}
     m_Modifications:
-    - target: {fileID: 3008326661244686940, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 1e065720b98195047bd440470656ffca, type: 2}
     - target: {fileID: 3530188839529917295, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: correctColour.b
       value: 0.2784314
@@ -709,10 +749,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2614148035902526967}
     m_Modifications:
-    - target: {fileID: 3008326661244686940, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 5bd731d2f96d4844693de44c785c834a, type: 2}
     - target: {fileID: 3530188839529917295, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: correctColour.b
       value: 0.2784314
@@ -786,8 +822,24 @@ PrefabInstance:
       value: Static Paintable Cube (3)
       objectReference: {fileID: 0}
     - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
-      propertyPath: enableSetColour
+      propertyPath: isPainted
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: paintColour.b
+      value: 0.2784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: paintColour.g
+      value: 0.3882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: paintColour.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: enableSetColour
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -818,10 +870,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2614148035902526967}
     m_Modifications:
-    - target: {fileID: 3008326661244686940, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: ff82ee36f8f8e3a4faa9d83be09e41d8, type: 2}
     - target: {fileID: 3530188839529917295, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: correctColour.b
       value: 0.81960785
@@ -893,6 +941,26 @@ PrefabInstance:
     - target: {fileID: 5959865650345884192, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: m_Name
       value: Static Paintable Cube (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: isPainted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: paintColour.b
+      value: 0.81960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: paintColour.g
+      value: 0.80784315
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: paintColour.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: enableSetColour
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
