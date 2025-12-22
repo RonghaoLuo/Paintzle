@@ -26,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1922983606878988538, guid: 00c19c86f5c43d941a542b6c1a1e210a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.7899928
       objectReference: {fileID: 0}
     - target: {fileID: 1922983606878988538, guid: 00c19c86f5c43d941a542b6c1a1e210a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -17.74
       objectReference: {fileID: 0}
     - target: {fileID: 1922983606878988538, guid: 00c19c86f5c43d941a542b6c1a1e210a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 22.820038
       objectReference: {fileID: 0}
     - target: {fileID: 1922983606878988538, guid: 00c19c86f5c43d941a542b6c1a1e210a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -67,6 +67,22 @@ PrefabInstance:
     - target: {fileID: 1922983606878988538, guid: 00c19c86f5c43d941a542b6c1a1e210a, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392130809452544213, guid: 00c19c86f5c43d941a542b6c1a1e210a, type: 3}
+      propertyPath: m_Range
+      value: 26.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392130809452544213, guid: 00c19c86f5c43d941a542b6c1a1e210a, type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392130809452544213, guid: 00c19c86f5c43d941a542b6c1a1e210a, type: 3}
+      propertyPath: m_SpotAngle
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392130809452544213, guid: 00c19c86f5c43d941a542b6c1a1e210a, type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
