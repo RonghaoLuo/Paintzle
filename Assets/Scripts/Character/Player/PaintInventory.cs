@@ -87,7 +87,7 @@ public class PaintInventory : MonoBehaviour
     {
         currentPaintIndex = paintToIndexMap[SelectedPaint];
         nextPaintIndex = currentPaintIndex;
-        if (scrollInput > 0f)
+        if (scrollInput < 0f)
         {
             // Scroll up
             do
@@ -95,7 +95,7 @@ public class PaintInventory : MonoBehaviour
                 nextPaintIndex = (nextPaintIndex + 1) % existPaints.Count;
             } while (!paintAvailability[nextPaintIndex] && nextPaintIndex != currentPaintIndex);
         }
-        else if (scrollInput < 0f)
+        else if (scrollInput > 0f)
         {
             // Scroll down
             do

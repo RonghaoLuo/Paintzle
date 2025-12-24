@@ -126,10 +126,10 @@ public class PlayerInput : MonoBehaviour
         //    CollectionManager.Instance.TrySpawnPowerUp(transform.position + transform.forward * 3);
         //}
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            erase.ErasePaint();
-        }
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    erase.ErasePaint();
+        //}
         #endregion
     }
 }

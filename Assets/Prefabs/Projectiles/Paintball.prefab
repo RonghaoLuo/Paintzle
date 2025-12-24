@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2563945504748177683}
   - component: {fileID: -2421762703670965302}
   - component: {fileID: 7877147430758723244}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Paintball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 8632501474921545043}
   - component: {fileID: 2721207990665389878}
   - component: {fileID: 2885312603007277938}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

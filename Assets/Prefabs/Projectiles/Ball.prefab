@@ -153,6 +153,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ball
   rb: {fileID: -2421762703670965302}
-  lifeTime: 5
-  spawnTime: 0
+  maxLifeTime: 2
+  timeOfSpawn: 0
   type: 0

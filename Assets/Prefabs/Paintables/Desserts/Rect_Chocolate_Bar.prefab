@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7823390223604601082, guid: cd4c2d7e633078047883faaecc63b414, type: 3}
       propertyPath: m_Name
-      value: Chocolate_Bar Variant
+      value: Rect_Chocolate_Bar
       objectReference: {fileID: 0}
     - target: {fileID: 8459677607934309267, guid: cd4c2d7e633078047883faaecc63b414, type: 3}
       propertyPath: m_LocalScale.x
-      value: 37.556824
+      value: 24.333036
       objectReference: {fileID: 0}
     - target: {fileID: 8459677607934309267, guid: cd4c2d7e633078047883faaecc63b414, type: 3}
       propertyPath: m_LocalScale.z
-      value: 52.479073
+      value: 34.05909
       objectReference: {fileID: 0}
     - target: {fileID: 8459677607934309267, guid: cd4c2d7e633078047883faaecc63b414, type: 3}
       propertyPath: m_LocalPosition.x
