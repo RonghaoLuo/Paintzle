@@ -97,7 +97,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.033333335
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: ad797a47a019e264d94bf596717c4467, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 6e23f305f48920c43bc5ab00b63e9f0e, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &2043837586674030167
 GameObject:
@@ -270,11 +270,11 @@ PrefabInstance:
     - target: {fileID: 2976643870704608146, guid: aa5509bbd5fb5494b97a908ebabfb7b6, type: 3}
       propertyPath: OnRoomEntry.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2339548507523488804}
+      objectReference: {fileID: 0}
     - target: {fileID: 2976643870704608146, guid: aa5509bbd5fb5494b97a908ebabfb7b6, type: 3}
       propertyPath: OnRoomEntry.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2339548507523488804}
+      objectReference: {fileID: 0}
     - target: {fileID: 2976643870704608146, guid: aa5509bbd5fb5494b97a908ebabfb7b6, type: 3}
       propertyPath: OnRoomComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
@@ -282,7 +282,7 @@ PrefabInstance:
     - target: {fileID: 2976643870704608146, guid: aa5509bbd5fb5494b97a908ebabfb7b6, type: 3}
       propertyPath: OnRoomComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 2339548507523488804}
+      objectReference: {fileID: 0}
     - target: {fileID: 2976643870704608146, guid: aa5509bbd5fb5494b97a908ebabfb7b6, type: 3}
       propertyPath: OnRoomEntry.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -468,17 +468,6 @@ PrefabInstance:
       addedObject: {fileID: 4474739727654907712}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa5509bbd5fb5494b97a908ebabfb7b6, type: 3}
---- !u!114 &2339548507523488804 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2976643870704608146, guid: aa5509bbd5fb5494b97a908ebabfb7b6, type: 3}
-  m_PrefabInstance: {fileID: 664447162511966134}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0629612620ea464c8c3304406067ed0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RoomKeeper
 --- !u!4 &2875715469242700313 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3373197045103078831, guid: aa5509bbd5fb5494b97a908ebabfb7b6, type: 3}

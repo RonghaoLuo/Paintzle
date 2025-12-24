@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -6094168573340683776}
   - component: {fileID: 4849237106620183683}
   m_Layer: 0
-  m_Name: Waffle_
+  m_Name: Waffle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
