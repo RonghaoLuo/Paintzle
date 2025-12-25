@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4445259512958716981}
   - component: {fileID: 7645989554019243174}
   m_Layer: 0
-  m_Name: Icing_base
+  m_Name: Cream_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -73,6 +73,8 @@ Material:
     - _BaseMetallicStrengh: 0
     - _BaseNormalStrength: 0
     - _BaseSmoothness: 0
+    - _BaseUseWorldSpace: 0
+    - _BaseWorldScale: 1
     - _Blend: 1
     - _BlendModePreserveSpecular: 1
     - _CastShadows: 1
