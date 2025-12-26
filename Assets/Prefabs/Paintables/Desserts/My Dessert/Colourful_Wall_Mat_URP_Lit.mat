@@ -34,11 +34,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseNormalMap:
-        m_Texture: {fileID: 2800000, guid: 9c64df700226d084081ef1cb64cfaf9b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6d3816218421cfd46b33701d126f6a56, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 62641a329822b22489211de5a7efbca3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 612b6c2e9c63732449a9d5cb84fd62fe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -71,10 +71,10 @@ Material:
     - _AlphaToMask: 0
     - _BaseAlpha: 1
     - _BaseMetallicStrengh: 0
-    - _BaseNormalStrength: 0.27
-    - _BaseSmoothness: 0.2
+    - _BaseNormalStrength: 0.2
+    - _BaseSmoothness: 0.1
     - _BaseUseWorldSpace: 1
-    - _BaseWorldScale: 0.035
+    - _BaseWorldScale: 0.05
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _CastShadows: 1

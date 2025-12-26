@@ -9216,6 +9216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Colourful_Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 8881562716516288808, guid: 9961a6570fca11c409c45adc7a7e3cf1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
