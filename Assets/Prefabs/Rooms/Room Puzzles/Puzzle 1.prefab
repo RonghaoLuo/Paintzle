@@ -80,7 +80,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5653679369480910947, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5653679369480910947, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -120,7 +120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: isPainted
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: paintColour.b
@@ -190,7 +190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5653679369480910947, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5653679369480910947, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -230,7 +230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: isPainted
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: paintColour.b
@@ -402,7 +402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5653679369480910947, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5653679369480910947, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -442,7 +442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: isPainted
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: paintColour.b
@@ -512,7 +512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5653679369480910947, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5653679369480910947, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -606,7 +606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5653679369480910947, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5653679369480910947, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -646,7 +646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: isPainted
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: paintColour.b
@@ -716,7 +716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5653679369480910947, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5653679369480910947, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -756,7 +756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: isPainted
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: paintColour.b
@@ -818,7 +818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7368684344777433220, guid: 58ea99437895e3347873756921d964e9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.394197
+      value: 12.394197
       objectReference: {fileID: 0}
     - target: {fileID: 7368684344777433220, guid: 58ea99437895e3347873756921d964e9, type: 3}
       propertyPath: m_LocalRotation.w

@@ -105,9 +105,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Paintable
   myRenderer: {fileID: 9046876148653179017}
-  paintCoverageMode: 1
-  fullPaintCoverage: 1
-  partialPaintCoverage: 0.3
+  paintCount: 0
+  coverageSteps:
+  - 0
+  - 1
   isPainted: 0
   paintColour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   enableSetColour: 1
