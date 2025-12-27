@@ -3,19 +3,29 @@ using UnityEngine;
 
 public class Paintable : MonoBehaviour
 {
-    private enum PaintCoverageMode { Partial, Full }
+    private enum PaintCoverageMode { None, Slight, Partial, Most, Full }
 
     [Header("Renderer")]
     [SerializeField] private Renderer myRenderer;
 
-    [Header("Paint Settings")]
-    [SerializeField] private PaintCoverageMode paintCoverageMode = PaintCoverageMode.Partial;
-    [SerializeField, Range(0, 1)] private float fullPaintCoverage = 1f;
-    [SerializeField, Range(0, 1)] private float partialPaintCoverage = 0.3f;
+    [Header("Coverage Progression")]
+    [Tooltip("How many paint actions have been applied to this Paintable.")]
+    [SerializeField, Min(0)] private int paintCount = 0;
+
+    [Tooltip("Coverage values for each step (index matches PaintCoverageMode).")]
+    [SerializeField]
+    private float[] coverageSteps = new float[]
+    {
+        0.00f, // None
+        0.1f, // Slight
+        0.2f, // Partial
+        0.3f, // Most
+        1.00f  // Full
+    };
 
     [Header("State")]
     [SerializeField] private bool isPainted = false;
-    [SerializeField] private Color paintColour = Color.gray5;
+    [SerializeField] private Color paintColour = Color.gray;
     [SerializeField] private bool enableSetColour = true;
 
     private Color oldColour;
@@ -25,6 +35,8 @@ public class Paintable : MonoBehaviour
 
     public Color PaintColour => paintColour;
     public bool IsPainted => isPainted;
+
+    public int PaintCount => paintCount;
 
     private static readonly int PaintEnabledID = Shader.PropertyToID("_PaintEnabled");
     private static readonly int PaintColorID = Shader.PropertyToID("_PaintColor");
@@ -38,13 +50,20 @@ public class Paintable : MonoBehaviour
     public void Paint(Color newColour)
     {
         if (!enableSetColour) return;
-        isPainted = true;
+
+        // Increment paint layers first (so coverage increases even if color stays the same)
+        IncrementPaintCount();
+
+        isPainted = paintCount > 0;
+
         oldColour = paintColour;
         paintColour = newColour;
 
+        // Always apply because coverage might have changed even if colour didn't
+        ApplyPaintRuntime();
+
         if (paintColour != oldColour)
         {
-            ApplyPaintRuntime();
             OnColourChange?.Invoke();
         }
     }
@@ -52,22 +71,50 @@ public class Paintable : MonoBehaviour
     public void ErasePaint()
     {
         if (!enableSetColour) return;
-        if (mpb == null)
-            mpb = new MaterialPropertyBlock();
+
+        if (mpb == null) mpb = new MaterialPropertyBlock();
 
         isPainted = false;
+        paintCount = 0; // reset layers
         oldColour = paintColour;
-        paintColour = Color.gray5;
+        paintColour = Color.gray;
 
         myRenderer.GetPropertyBlock(mpb);
         mpb.SetFloat(PaintEnabledID, 0f);
-        mpb.SetColor(PaintColorID, Color.gray5);
+        mpb.SetColor(PaintColorID, Color.gray);
+        mpb.SetFloat(PaintCoverageID, GetCoverageFromCount()); // will be 0
         myRenderer.SetPropertyBlock(mpb);
 
         if (paintColour != oldColour)
         {
             OnColourChange?.Invoke();
         }
+    }
+
+    private void IncrementPaintCount()
+    {
+        int maxCount = GetMaxPaintCount();
+        paintCount = Mathf.Clamp(paintCount + 1, 0, maxCount);
+    }
+
+    private int GetMaxPaintCount()
+    {
+        // If you keep 5 steps, max "paintCount" should be 4 (index 4 => Full)
+        return Mathf.Max(0, coverageSteps.Length - 1);
+    }
+
+    private float GetCoverageFromCount()
+    {
+        if (coverageSteps == null || coverageSteps.Length == 0) return 0f;
+
+        int idx = Mathf.Clamp(paintCount, 0, coverageSteps.Length - 1);
+        return Mathf.Clamp01(coverageSteps[idx]);
+    }
+
+    private PaintCoverageMode GetModeFromCount()
+    {
+        int idx = Mathf.Clamp(paintCount, 0, Enum.GetValues(typeof(PaintCoverageMode)).Length - 1);
+        return (PaintCoverageMode)idx;
     }
 
     private void ApplyPaintRuntime()
@@ -78,22 +125,9 @@ public class Paintable : MonoBehaviour
     private void ApplyMPB()
     {
         if (myRenderer == null) return;
-        if (mpb == null)
-        {
-            mpb = new MaterialPropertyBlock();
-        }
+        if (mpb == null) mpb = new MaterialPropertyBlock();
 
-        float coverage;
-
-        switch (paintCoverageMode)
-        {
-            case PaintCoverageMode.Partial:
-                coverage = partialPaintCoverage;
-                break;
-            default:
-                coverage = fullPaintCoverage;
-                break;
-        }
+        float coverage = GetCoverageFromCount();
 
         myRenderer.GetPropertyBlock(mpb);
 
@@ -107,37 +141,33 @@ public class Paintable : MonoBehaviour
     private void ApplyPaintWithMPB()
     {
         if (myRenderer == null) return;
-        if (mpb == null)
-        {
-            mpb = new MaterialPropertyBlock();
-        }
+        if (mpb == null) mpb = new MaterialPropertyBlock();
 
-        float coverage;
-
-        switch (paintCoverageMode)
-        {
-            case PaintCoverageMode.Partial:
-                coverage = partialPaintCoverage;
-                break;
-            default:
-                coverage = fullPaintCoverage;
-                break;
-        }
+        float coverage = GetCoverageFromCount();
 
         myRenderer.GetPropertyBlock(mpb);
 
         mpb.SetFloat(PaintCoverageID, coverage);
         mpb.SetColor(PaintColorID, paintColour);
-        mpb.SetFloat(PaintEnabledID, 1f);
+        mpb.SetFloat(PaintEnabledID, isPainted ? 1f : 0f);
 
         myRenderer.SetPropertyBlock(mpb);
     }
 
     private void OnValidate()
     {
+        // Keep paintCount within valid range in Inspector
+        paintCount = Mathf.Clamp(paintCount, 0, GetMaxPaintCount());
+
+        // If paintCount is 0, consider it not painted
+        isPainted = paintCount > 0;
+
         ApplyMPB();
     }
 
     public void EnableSetColour() => enableSetColour = true;
     public void DisableSetColour() => enableSetColour = false;
+
+    // Optional helper if you want to read the current mode (debug/UI)
+    public string CurrentCoverageMode => GetModeFromCount().ToString();
 }
