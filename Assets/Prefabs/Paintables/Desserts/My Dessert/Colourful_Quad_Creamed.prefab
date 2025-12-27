@@ -40,10 +40,6 @@ PrefabInstance:
       propertyPath: paintCoverageMode
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3674836308532488221, guid: d128d961a4c6db14c9a8f88beadbe488, type: 3}
-      propertyPath: partialPaintCoverage
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 8857959321349413220, guid: d128d961a4c6db14c9a8f88beadbe488, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

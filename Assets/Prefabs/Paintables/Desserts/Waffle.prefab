@@ -128,7 +128,7 @@ MonoBehaviour:
   myRenderer: {fileID: 7332445818175551082}
   paintCoverageMode: 0
   fullPaintCoverage: 1
-  partialPaintCoverage: 0.3
+  partialPaintCoverage: 0.1
   isPainted: 0
   paintColour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   enableSetColour: 1

@@ -663,7 +663,7 @@ GameObject:
   - component: {fileID: 6037743344724257063}
   - component: {fileID: 1656094239680677346}
   m_Layer: 0
-  m_Name: Empty Dessert Small
+  m_Name: Empty Small Dessert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

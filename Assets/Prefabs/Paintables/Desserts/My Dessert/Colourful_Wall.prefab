@@ -9,9 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4323910922478426722}
-  - component: {fileID: 7824603513780614590}
-  - component: {fileID: 7063247612317314986}
-  - component: {fileID: 6622113445388984718}
   m_Layer: 0
   m_Name: Colourful_Wall
   m_TagString: Untagged
@@ -35,62 +32,6 @@ Transform:
   - {fileID: 8881562716516288808}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &7824603513780614590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4839921496504658782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c879870aac209b4381c786b2b4f6417, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Paintable
-  myRenderer: {fileID: 3048758723657577443}
-  paintCoverageMode: 0
-  fullPaintCoverage: 1
-  partialPaintCoverage: 0.3
-  isPainted: 0
-  paintColour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  enableSetColour: 1
---- !u!114 &7063247612317314986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4839921496504658782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e79a54c0c2151724996da6df64af9005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StaticPaintableDetector
-  correctColour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  output: 0
-  paintable: {fileID: 7824603513780614590}
-  detectForAnyColour: 1
---- !u!65 &6622113445388984718
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4839921496504658782}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.5, y: 6, z: 6}
-  m_Center: {x: 0, y: 0, z: 3}
 --- !u!1001 &120591316377325644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143,17 +84,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2910562453765281891, guid: d128d961a4c6db14c9a8f88beadbe488, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d128d961a4c6db14c9a8f88beadbe488, type: 3}
---- !u!23 &3048758723657577443 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 3162425025585308591, guid: d128d961a4c6db14c9a8f88beadbe488, type: 3}
-  m_PrefabInstance: {fileID: 120591316377325644}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8881562716516288808 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8857959321349413220, guid: d128d961a4c6db14c9a8f88beadbe488, type: 3}
