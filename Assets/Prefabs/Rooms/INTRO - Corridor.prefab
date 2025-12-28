@@ -67,10 +67,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Left Click to shoot paintball.
 
-    Paintable objects are gray by default,
-    like this coridor wall.
 
-    Press TAB to pause, and configure mouse sensitivity.'
+    Press TAB to pause, and configure
+    mouse sensitivity.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
