@@ -50,6 +50,9 @@ MonoBehaviour:
   - type: 1
     prefab: {fileID: 4438613472572115555, guid: c135653221c46df4da11a5d77527d2d4, type: 3}
     initialSize: 100
+  - type: 5
+    prefab: {fileID: 7242172106827334791, guid: 43ea723e4c0cd284ea54b374e9d0d9f4, type: 3}
+    initialSize: 100
   postStartPools:
   - type: 4
     prefab: {fileID: 5714915717770990913, guid: 933bbddb2eb8ef5438fb978768eb481d, type: 3}

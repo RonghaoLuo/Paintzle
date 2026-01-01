@@ -6,5 +6,5 @@ public interface IPoolable
     GameObject GameObject { get; }
     void OnSpawn();
     void OnDespawn();
-    void InitializePoolable();
+    void OnPoolInitialize();
 }

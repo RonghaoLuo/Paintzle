@@ -66,7 +66,7 @@ public class StateNpc : MonoBehaviour, IPoolable
         myAgent.Warp(position);
     }
 
-    public void InitializePoolable()
+    public void OnPoolInitialize()
     {
         //Debug.Log("tries to initialize a state npc");
         NpcManager.Instance.RegisterNpc(gameObject, this);

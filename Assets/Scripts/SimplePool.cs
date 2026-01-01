@@ -37,7 +37,7 @@ public class SimplePool
                 Debug.LogError($"[SimplePool] Object '{prefab.name}' does not implement IPoolable.");
                 return;
             }
-            p.InitializePoolable();
+            p.OnPoolInitialize();
             go.SetActive(false);
             queue.Enqueue(new PooledObject(go, p));
         }
@@ -62,7 +62,7 @@ public class SimplePool
     {
         GameObject go = Object.Instantiate(prefab, poolParent);
         IPoolable po = go.GetComponent<IPoolable>();
-        po.InitializePoolable();
+        po.OnPoolInitialize();
 
         return new PooledObject(go, po);
     }

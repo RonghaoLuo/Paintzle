@@ -121,10 +121,10 @@ public class PlayerInput : MonoBehaviour
         //    shooting.StartPowerUp(speed, size, effectRadius, cooldown, duration, true);
         //}
 
-        //if (Input.GetKeyDown(KeyCode.P))
-        //{
-        //    CollectionManager.Instance.TrySpawnPowerUp(transform.position + transform.forward * 3);
-        //}
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            CollectionManager.Instance.TrySpawnPowerUp(transform.position + transform.forward * 3);
+        }
 
         //if (Input.GetKeyDown(KeyCode.E))
         //{

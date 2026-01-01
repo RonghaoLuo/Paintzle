@@ -84,6 +84,11 @@ public class PlayerShootPaintball : MouseClickStrategy
 
         paintball.SetSize(CurrentPaintballSize);
         paintball.SetEffectRadius(CurrentEffectRadius);
+        paintball.SetVFXProperties(
+            sizeMultiplier: paintballSizeMultiplier,
+            countMultiplier: paintballSizeMultiplier,
+            spreadSpeedMultiplier: projectileSpeedMultiplier
+        );
     }
 
     public void StartPowerUp(float projectileSpeed, float size, float effectRafius, 

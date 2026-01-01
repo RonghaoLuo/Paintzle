@@ -137,5 +137,5 @@ public class PoolManager : MonoBehaviour
 
 public enum PoolableType
 {
-    Ball, Paintball, Bullet, Enemy, Prey
+    Ball, Paintball, Bullet, Enemy, Prey, VFX_PaintImpactBurst
 }

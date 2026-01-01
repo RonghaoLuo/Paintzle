@@ -60,7 +60,7 @@ public abstract class Projectile : MonoBehaviour, IPoolable
         // apply damage/effects...
     }
 
-    public virtual void InitializePoolable()
+    public virtual void OnPoolInitialize()
     {
         
     }

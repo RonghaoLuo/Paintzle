@@ -7,16 +7,25 @@ public class Paintball : Projectile
     [SerializeField] private LayerMask paintableMask;
     [SerializeField] private MeshRenderer meshRenderer;
 
+    [Header("VFX Properties")]
+    [SerializeField] private float sizeMultiplier = 1f;
+    [SerializeField] private float countMultiplier = 1f;
+    [SerializeField] private float spreadSpeedMultiplier = 1f;
+
     protected override void OnCollisionEnter(Collision collision)
     {
         //Debug.Log("Paintball Hit");
         base.OnCollisionEnter(collision);
+        VFXManager.Instance.SpawnPaintImpactBurst(transform.position, 
+            Quaternion.LookRotation(collision.GetContact(0).normal), paintColor,
+            sizeMultiplier, countMultiplier, spreadSpeedMultiplier);
 
         Vector3 overlapSpherePosition = transform.position;
 
         PoolManager.Instance.ReturnToPool(this);
 
-        Collider[] paintableColliders = Physics.OverlapSphere(overlapSpherePosition, effectRadius, paintableMask);
+        Collider[] paintableColliders = Physics.OverlapSphere(overlapSpherePosition, 
+            effectRadius, paintableMask);
 
         foreach (Collider collider in paintableColliders)
         {
@@ -42,9 +51,9 @@ public class Paintball : Projectile
         }
     }
 
-    public override void InitializePoolable()
+    public override void OnPoolInitialize()
     {
-        base.InitializePoolable();
+        base.OnPoolInitialize();
         PoolManager.Instance.gameObjectToPaintballMap.Add(GameObject, this);
     }
 
@@ -62,5 +71,12 @@ public class Paintball : Projectile
     public void SetEffectRadius(float effectRadius)
     {
         this.effectRadius = effectRadius;
+    }
+
+    public void SetVFXProperties(float sizeMultiplier, float countMultiplier, float spreadSpeedMultiplier)
+    {
+        this.sizeMultiplier = sizeMultiplier;
+        this.countMultiplier = countMultiplier;
+        this.spreadSpeedMultiplier = spreadSpeedMultiplier;
     }
 }
