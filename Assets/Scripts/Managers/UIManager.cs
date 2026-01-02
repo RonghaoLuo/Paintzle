@@ -1,16 +1,18 @@
 using System;
-using TMPro;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
-    public Action<int> OnUpdateSelectionOutline;
-    public Action<int, Color> OnUpdatePaintIcon;
+    public Action<Color> OnSelectPaint;
+    public Action<int> OnSelectPaintWithIndex;
+    public Action<int, Color> OnCollectPaint;
     public Action<bool> OnToggleInteractionPrompt;
     public Action<float> OnPowerUpCountdown;
     public Action<string> OnUpdateHotbarText;
+    public Action OnPowerUpStart;
+    public Action OnPowerUpEnd;
 
     [SerializeField] private UIPlayerHUD playerHUD;
     [SerializeField] private UIPauseMenu pauseMenu;

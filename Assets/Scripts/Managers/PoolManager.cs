@@ -25,6 +25,8 @@ public class PoolManager : MonoBehaviour
     [SerializeField] private PoolDefinition[] definedPools;
     [SerializeField] private PoolDefinition[] postStartPools;
 
+    private bool isPostStartPoolsInitialized = false;
+
     #region Reference Maps
     public Dictionary<GameObject, Paintball> gameObjectToPaintballMap = new();
 
@@ -70,6 +72,8 @@ public class PoolManager : MonoBehaviour
 
     private void InitializePostStartPools()
     {
+        if (isPostStartPoolsInitialized)
+            return;
         for (int i = 0; i < postStartPools.Length; i++)
         {
             PoolDefinition def = postStartPools[i];
@@ -77,6 +81,7 @@ public class PoolManager : MonoBehaviour
             poolParent.transform.SetParent(this.transform, false);
             poolMap[def.type] = new SimplePool(def.prefab, poolParent.transform, def.initialSize);
         }
+        isPostStartPoolsInitialized = true;
     }
 
     public GameObject Spawn(PoolableType type, Vector3 pos, Quaternion rot, Vector3 velocity)

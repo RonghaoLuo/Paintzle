@@ -44,6 +44,7 @@ public class PlayerShootPaintball : MouseClickStrategy
             if (powerUpTimer <= 0)
             {
                 ResetMultipliersAndToggles();
+                UIManager.Instance.OnPowerUpEnd?.Invoke();
             }
         }
         #endregion
@@ -100,5 +101,7 @@ public class PlayerShootPaintball : MouseClickStrategy
         effectRadiusMultiplier = effectRafius;
         powerUpTimer = duration;
         shootWithRandomColour = shootRandomColour;
+
+        UIManager.Instance.OnPowerUpStart?.Invoke();
     }
 }

@@ -56,7 +56,7 @@ MonoBehaviour:
   postStartPools:
   - type: 4
     prefab: {fileID: 5714915717770990913, guid: 933bbddb2eb8ef5438fb978768eb481d, type: 3}
-    initialSize: 80
+    initialSize: 100
 --- !u!1 &1443056336547680428
 GameObject:
   m_ObjectHideFlags: 0

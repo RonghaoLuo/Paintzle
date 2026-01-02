@@ -48,12 +48,13 @@ public class PaintInventory : MonoBehaviour
     private void Start()
     {
         CollectionManager.Instance.RegisterInventory(this);
+        UIManager.Instance.OnSelectPaint?.Invoke(SelectedPaint);
 
         for (int i = 0; i < paintAvailability.Count; i++)
         {
             if (paintAvailability[i])
             {
-                UIManager.Instance.OnUpdatePaintIcon?.Invoke(i, existPaints[i]);
+                UIManager.Instance.OnCollectPaint?.Invoke(i, existPaints[i]);
             }
         }
     }
@@ -63,7 +64,8 @@ public class PaintInventory : MonoBehaviour
         if (existPaints[index] == null || !paintAvailability[index]) return;
 
         SelectedPaint = existPaints[index];
-        UIManager.Instance.OnUpdateSelectionOutline.Invoke(index);
+        UIManager.Instance.OnSelectPaintWithIndex.Invoke(index);
+        UIManager.Instance.OnSelectPaint?.Invoke(SelectedPaint);
     }
 
     private void SetPaintAvailability(Color colour, bool isAvailable)
@@ -80,7 +82,7 @@ public class PaintInventory : MonoBehaviour
     {
         if (!existPaints.Contains(colour)) return;
         SetPaintAvailability(colour, true);
-        UIManager.Instance.OnUpdatePaintIcon?.Invoke(paintToIndexMap[colour], colour);
+        UIManager.Instance.OnCollectPaint?.Invoke(paintToIndexMap[colour], colour);
     }
 
     public void CycleSelectedPaint(float scrollInput)

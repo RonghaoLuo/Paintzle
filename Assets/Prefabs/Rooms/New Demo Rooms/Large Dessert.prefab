@@ -3552,6 +3552,10 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2816976136099196991, guid: b29c89a2dd53ac64dbd0ecbae3bb60f6, type: 3}
+      propertyPath: challengeMaxNumOfPreys
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816976136099196991, guid: b29c89a2dd53ac64dbd0ecbae3bb60f6, type: 3}
       propertyPath: spawnPoints.Array.size
       value: 12
       objectReference: {fileID: 0}

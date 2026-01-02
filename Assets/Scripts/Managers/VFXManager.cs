@@ -47,7 +47,7 @@ public class VFXManager : MonoBehaviour
 
     }
 
-    public GameObject SpawnVFX(VFXType type, Vector3 position, Quaternion rotation)
+    private GameObject SpawnVFX(VFXType type, Vector3 position, Quaternion rotation)
     {
         return PoolManager.Instance.Spawn(vfxToPool[type], position, rotation, Vector3.zero);
     }

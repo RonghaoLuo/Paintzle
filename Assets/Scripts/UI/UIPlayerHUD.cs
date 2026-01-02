@@ -12,6 +12,9 @@ public class UIPlayerHUD : MonoBehaviour
     [SerializeField] private TextMeshProUGUI interactionPrompt;
     [SerializeField] private UIDurationDown powerUpDurationDown;
     [SerializeField] private TextMeshProUGUI HotbarText;
+    [SerializeField] private Image crosshair;
+    [SerializeField] private Image rainbowCrosshair;
+    [SerializeField] private RectTransform hotBar;
 
     private TimeSpan formattedTime;
 
@@ -21,14 +24,9 @@ public class UIPlayerHUD : MonoBehaviour
         TopBarText.text = formattedTime.Minutes + ":" + formattedTime.Seconds;
     }
 
-    private void SetOutlinePosition(Transform transform)
+    private void OutlineIcon(int paintIconIndex)
     {
-        selectionOutline.transform.position = transform.position;
-    }
-
-    private void SetOutlinePosition(int paintIconIndex)
-    {
-        SetOutlinePosition(paintIcons[paintIconIndex].transform);
+        selectionOutline.transform.position = paintIcons[paintIconIndex].transform.position;
     }
 
     private void SetPaintIconColour(int iconIndex, Color colour)
@@ -51,24 +49,54 @@ public class UIPlayerHUD : MonoBehaviour
         HotbarText.text = text;
     }
 
+    private void SetCrosshairColor(Color color)
+    {
+        crosshair.color = color;
+    }
+
+    private void SetSelectionOutlineColour(Color colour)
+    {
+        selectionOutline.color = colour;
+    }
+
+    private void HandlePowerUpStart()
+    {
+        hotBar.gameObject.SetActive(false);
+        rainbowCrosshair.gameObject.SetActive(true);
+    }
+
+    private void HandlePowerUpEnd()
+    {
+        hotBar.gameObject.SetActive(true);
+        rainbowCrosshair.gameObject.SetActive(false);
+    }
+
     private void Awake()
     {
         UIManager.Instance.RegisterPlayerHUD(this);
         gameObject.SetActive(false);
 
-        UIManager.Instance.OnUpdateSelectionOutline += SetOutlinePosition;
-        UIManager.Instance.OnUpdatePaintIcon += SetPaintIconColour;
+        UIManager.Instance.OnSelectPaint += SetCrosshairColor;
+        UIManager.Instance.OnSelectPaint += SetSelectionOutlineColour;
+        UIManager.Instance.OnSelectPaintWithIndex += OutlineIcon;
+        UIManager.Instance.OnCollectPaint += SetPaintIconColour;
         UIManager.Instance.OnToggleInteractionPrompt += SetInteractionPromptVisibility;
         UIManager.Instance.OnPowerUpCountdown += StartPowerUpCountdown;
         UIManager.Instance.OnUpdateHotbarText += SetHotbarText;
+        UIManager.Instance.OnPowerUpStart += HandlePowerUpStart;
+        UIManager.Instance.OnPowerUpEnd += HandlePowerUpEnd;
     }
 
     private void OnDestroy()
     {
-        UIManager.Instance.OnUpdateSelectionOutline -= SetOutlinePosition;
-        UIManager.Instance.OnUpdatePaintIcon -= SetPaintIconColour;
+        UIManager.Instance.OnSelectPaint -= SetCrosshairColor;
+        UIManager.Instance.OnSelectPaint -= SetSelectionOutlineColour;
+        UIManager.Instance.OnSelectPaintWithIndex -= OutlineIcon;
+        UIManager.Instance.OnCollectPaint -= SetPaintIconColour;
         UIManager.Instance.OnToggleInteractionPrompt -= SetInteractionPromptVisibility;
         UIManager.Instance.OnPowerUpCountdown -= StartPowerUpCountdown;
         UIManager.Instance.OnUpdateHotbarText -= SetHotbarText;
+        UIManager.Instance.OnPowerUpStart -= HandlePowerUpStart;
+        UIManager.Instance.OnPowerUpEnd -= HandlePowerUpEnd;
     }
 }
