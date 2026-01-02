@@ -302,6 +302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PoolManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5195731459440635177, guid: 99f2edb141e6d244fa4e5c3e93cc9bb5, type: 3}
+      propertyPath: postStartPools.Array.data[0].prefab
+      value: 
+      objectReference: {fileID: 5714915717770990913, guid: 3352a17b8ee92394480b477cb9405d92, type: 3}
     - target: {fileID: 8402261384545460538, guid: 99f2edb141e6d244fa4e5c3e93cc9bb5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
