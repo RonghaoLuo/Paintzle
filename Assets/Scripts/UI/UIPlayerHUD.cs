@@ -44,9 +44,10 @@ public class UIPlayerHUD : MonoBehaviour
         powerUpDurationDown.StartCountdown(duration);
     }
 
-    private void SetHotbarText(string text)
+    private void SetHotbarText(string text, Color color)
     {
         HotbarText.text = text;
+        HotbarText.color = color;
     }
 
     private void SetCrosshairColor(Color color)

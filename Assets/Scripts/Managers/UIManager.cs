@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     public Action<int, Color> OnCollectPaint;
     public Action<bool> OnToggleInteractionPrompt;
     public Action<float> OnPowerUpCountdown;
-    public Action<string> OnUpdateHotbarText;
+    public Action<string, Color> OnUpdateHotbarText;
     public Action OnPowerUpStart;
     public Action OnPowerUpEnd;
 
@@ -90,12 +90,12 @@ public class UIManager : MonoBehaviour
 
     private void HandleChallengeComplete()
     {
-        OnUpdateHotbarText?.Invoke("Challenge Complete!\nPress Tab for Menu");
+        OnUpdateHotbarText?.Invoke("Challenge Complete!\nPress Tab for Menu", Color.gold);
     }
 
     private void HandleChallengeFail()
     {
-        OnUpdateHotbarText?.Invoke("Challenge Failed!\nPress Tab for Menu");
+        OnUpdateHotbarText?.Invoke("Challenge Failed!\nPress Tab for Menu", Color.red);
     }
 
     public void EnableInteractionPrompt()

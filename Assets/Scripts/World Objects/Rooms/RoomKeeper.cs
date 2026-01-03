@@ -99,4 +99,9 @@ public class RoomKeeper : MonoBehaviour
             }
         }
     }
+
+    public void MessagePlayer(string message)
+    {
+        UIManager.Instance.OnUpdateHotbarText(message, Color.cyan);
+    }
 }
