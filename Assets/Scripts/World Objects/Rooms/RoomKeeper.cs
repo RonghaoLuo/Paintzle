@@ -104,4 +104,9 @@ public class RoomKeeper : MonoBehaviour
     {
         UIManager.Instance.OnUpdateHotbarText(message, Color.cyan);
     }
+
+    public void SendPlayerPopup(string message)
+    {
+        UIManager.Instance.OnPopup?.Invoke(message);
+    }
 }

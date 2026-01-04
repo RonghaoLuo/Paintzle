@@ -3628,10 +3628,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5990733119579353814}
     - target: {fileID: 2816976136099196991, guid: b29c89a2dd53ac64dbd0ecbae3bb60f6, type: 3}
-      propertyPath: OnRoomComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 5990733119579353814}
-    - target: {fileID: 2816976136099196991, guid: b29c89a2dd53ac64dbd0ecbae3bb60f6, type: 3}
       propertyPath: OnRoomEntry.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -3648,19 +3644,11 @@ PrefabInstance:
       value: MessagePlayer
       objectReference: {fileID: 0}
     - target: {fileID: 2816976136099196991, guid: b29c89a2dd53ac64dbd0ecbae3bb60f6, type: 3}
-      propertyPath: OnRoomComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChallengeComplete
-      objectReference: {fileID: 0}
-    - target: {fileID: 2816976136099196991, guid: b29c89a2dd53ac64dbd0ecbae3bb60f6, type: 3}
       propertyPath: OnRoomEntry.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: RoomKeeper, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2816976136099196991, guid: b29c89a2dd53ac64dbd0ecbae3bb60f6, type: 3}
       propertyPath: OnRoomEntry.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: RoomKeeper, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2816976136099196991, guid: b29c89a2dd53ac64dbd0ecbae3bb60f6, type: 3}
-      propertyPath: OnRoomComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: RoomKeeper, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2816976136099196991, guid: b29c89a2dd53ac64dbd0ecbae3bb60f6, type: 3}

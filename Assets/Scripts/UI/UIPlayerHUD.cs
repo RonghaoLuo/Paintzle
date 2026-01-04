@@ -15,6 +15,7 @@ public class UIPlayerHUD : MonoBehaviour
     [SerializeField] private Image crosshair;
     [SerializeField] private Image rainbowCrosshair;
     [SerializeField] private RectTransform hotBar;
+    [SerializeField] private PopupQueue popupQueue;
 
     private TimeSpan formattedTime;
 
@@ -72,6 +73,11 @@ public class UIPlayerHUD : MonoBehaviour
         rainbowCrosshair.gameObject.SetActive(false);
     }
 
+    private void EnqueuePopup(string text)
+    {
+        popupQueue.Enqueue(text);
+    }
+
     private void Awake()
     {
         UIManager.Instance.RegisterPlayerHUD(this);
@@ -86,6 +92,7 @@ public class UIPlayerHUD : MonoBehaviour
         UIManager.Instance.OnUpdateHotbarText += SetHotbarText;
         UIManager.Instance.OnPowerUpStart += HandlePowerUpStart;
         UIManager.Instance.OnPowerUpEnd += HandlePowerUpEnd;
+        UIManager.Instance.OnPopup += EnqueuePopup;
     }
 
     private void OnDestroy()
@@ -99,5 +106,6 @@ public class UIPlayerHUD : MonoBehaviour
         UIManager.Instance.OnUpdateHotbarText -= SetHotbarText;
         UIManager.Instance.OnPowerUpStart -= HandlePowerUpStart;
         UIManager.Instance.OnPowerUpEnd -= HandlePowerUpEnd;
+        UIManager.Instance.OnPopup -= EnqueuePopup;
     }
 }

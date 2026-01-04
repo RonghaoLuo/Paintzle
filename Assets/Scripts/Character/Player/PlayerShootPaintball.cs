@@ -13,7 +13,7 @@ public class PlayerShootPaintball : MouseClickStrategy
     [Header("Base Stats")]
     [SerializeField] private float baseProjectileSpeed = 10f;
     [SerializeField] private float baseShootCooldown = 0.5f;
-    [SerializeField] private float basePaintballSize = 1f;
+    //[SerializeField] private float basePaintballSize = 1f;
     [SerializeField] private float baseEffectRadius = 1f;
 
     [Header("Multipliers")]

@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     public Action<string, Color> OnUpdateHotbarText;
     public Action OnPowerUpStart;
     public Action OnPowerUpEnd;
+    public Action<string> OnPopup;
 
     [SerializeField] private UIPlayerHUD playerHUD;
     [SerializeField] private UIPauseMenu pauseMenu;

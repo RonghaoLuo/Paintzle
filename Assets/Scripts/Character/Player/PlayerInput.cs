@@ -130,6 +130,11 @@ public class PlayerInput : MonoBehaviour
         //{
         //    erase.ErasePaint();
         //}
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            UIManager.Instance.OnPopup?.Invoke("Test Popup!");
+        }
         #endregion
     }
 }
