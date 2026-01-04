@@ -56,6 +56,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8640815420042304002, guid: b4a1de21cc2ac2a449e4de9fa47bfad4, type: 3}
+      propertyPath: m_Size.y
+      value: 0.01459352
+      objectReference: {fileID: 0}
+    - target: {fileID: 8640815420042304002, guid: b4a1de21cc2ac2a449e4de9fa47bfad4, type: 3}
+      propertyPath: m_Center.y
+      value: 0.0005907096
+      objectReference: {fileID: 0}
     - target: {fileID: 8911290297260655753, guid: b4a1de21cc2ac2a449e4de9fa47bfad4, type: 3}
       propertyPath: m_Name
       value: Rect_Waffle

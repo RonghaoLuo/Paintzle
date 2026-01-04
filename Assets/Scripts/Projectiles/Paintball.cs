@@ -6,11 +6,15 @@ public class Paintball : Projectile
     [SerializeField] private float effectRadius;
     [SerializeField] private LayerMask paintableMask;
     [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private Transform ballBody;
+    [SerializeField] private TrailRenderer trail;
 
     [Header("VFX Properties")]
     [SerializeField] private float sizeMultiplier = 1f;
     [SerializeField] private float countMultiplier = 1f;
     [SerializeField] private float spreadSpeedMultiplier = 1f;
+    [SerializeField] private float baseBallScale = 0.19f;
+    [SerializeField] private float baseTrailWidthMultiplier = 0.2f;
 
     protected override void OnCollisionEnter(Collision collision)
     {
@@ -63,9 +67,12 @@ public class Paintball : Projectile
         meshRenderer.material.color = colour;
     }
 
-    public void SetSize(float size)
+    public void SetSize(float multiplier)
     {
-        transform.localScale = new(size, size, size);
+        //transform.localScale = new(size, size, size);
+        ballBody.localScale = new Vector3(baseBallScale * multiplier, 
+            baseBallScale * multiplier, baseBallScale * multiplier);
+        trail.widthMultiplier = baseTrailWidthMultiplier * multiplier;
     }
 
     public void SetEffectRadius(float effectRadius)
@@ -73,7 +80,7 @@ public class Paintball : Projectile
         this.effectRadius = effectRadius;
     }
 
-    public void SetVFXProperties(float sizeMultiplier, float countMultiplier, float spreadSpeedMultiplier)
+    public void SetImpactVFXProperties(float sizeMultiplier, float countMultiplier, float spreadSpeedMultiplier)
     {
         this.sizeMultiplier = sizeMultiplier;
         this.countMultiplier = countMultiplier;

@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class PlayerShootPaintball : MouseClickStrategy
 {
+    [SerializeField] private Camera playerCamera;
     [SerializeField] private Transform weaponTip;
+    [SerializeField] private float maxShootDistance = 1000f;
     [SerializeField] private PaintInventory inventory;
     [SerializeField] private Rigidbody playerRigidbody;
     [SerializeField] private CharacterController playerController;
@@ -25,7 +27,7 @@ public class PlayerShootPaintball : MouseClickStrategy
 
     private float CurrentProjectileSpeed => baseProjectileSpeed * projectileSpeedMultiplier;
     private float CurrentShootCooldown => baseShootCooldown * shootCooldownMultiplier;
-    private float CurrentPaintballSize => basePaintballSize * paintballSizeMultiplier;
+    //private float CurrentPaintballSize => basePaintballSize * paintballSizeMultiplier;
     private float CurrentEffectRadius => baseEffectRadius * effectRadiusMultiplier;
 
 
@@ -70,8 +72,21 @@ public class PlayerShootPaintball : MouseClickStrategy
 
     public void Shoot()
     {
+        #region Finding Target Point
+        Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+        Vector3 targetPoint;
+
+        if (Physics.Raycast(ray, out RaycastHit hit, maxShootDistance))
+            targetPoint = hit.point;
+        else
+            targetPoint = ray.GetPoint(maxShootDistance); // Point in the distance if no hit
+
+        //Calculate direction from muzzle to target
+        Vector3 directionToTarget = (targetPoint - weaponTip.position).normalized;
+        #endregion
+
         GameObject go = PoolManager.Instance.Spawn(toShoot, weaponTip.transform, 
-            CurrentProjectileSpeed + Vector3.Dot(playerController.velocity, transform.forward));
+            CurrentProjectileSpeed + Vector3.Dot(playerController.velocity, directionToTarget));
         Paintball paintball = PoolManager.Instance.gameObjectToPaintballMap[go];
         
         if (shootWithRandomColour)
@@ -83,9 +98,9 @@ public class PlayerShootPaintball : MouseClickStrategy
             paintball.SetColour(inventory.SelectedPaint);
         }
 
-        paintball.SetSize(CurrentPaintballSize);
+        paintball.SetSize(paintballSizeMultiplier);
         paintball.SetEffectRadius(CurrentEffectRadius);
-        paintball.SetVFXProperties(
+        paintball.SetImpactVFXProperties(
             sizeMultiplier: paintballSizeMultiplier,
             countMultiplier: paintballSizeMultiplier,
             spreadSpeedMultiplier: projectileSpeedMultiplier
