@@ -37,6 +37,10 @@ public class GameManager : MonoBehaviour
 
     #region Settings
     private float mouseSensitivity = 1f;
+    private float masterVolume = 1f;
+    private float uiVolume = 1f;
+    private float sfxVolume = 1f;
+    private float musicVolume = 1f;
     #endregion
 
     public bool IsGameRunning
@@ -47,6 +51,27 @@ public class GameManager : MonoBehaviour
     public float MouseSensitivity
     {
         get { return mouseSensitivity; }
+        set { mouseSensitivity = value; }
+    }
+    public float MasterVolume
+    {
+        get { return masterVolume; }
+        set { masterVolume = value; }
+    }
+    public float UiVolume
+    {
+        get { return uiVolume; }
+        set { uiVolume = value; }
+    }
+    public float SfxVolume
+    {
+        get { return sfxVolume; }
+        set { sfxVolume = value; }
+    }
+    public float MusicVolume
+    {
+        get { return musicVolume; }
+        set { musicVolume = value; }
     }
 
     private void Awake()
@@ -205,10 +230,15 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void SetSensitivity(float newSensitivity)
-    {
-        mouseSensitivity = newSensitivity;
-    }
+    //public void SetSettingValues(float newSensitivity, float masterVol, float uiVol,
+    //    float sfxVol, float musicVol)
+    //{
+    //    mouseSensitivity = newSensitivity;
+    //    masterVolume = masterVol;
+    //    uiVolume = uiVol;
+    //    sfxVolume = sfxVol;
+    //    musicVolume = musicVol;
+    //}
 
     private void ResetAllManagers()
     {

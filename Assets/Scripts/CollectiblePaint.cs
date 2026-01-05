@@ -13,6 +13,7 @@ public class CollectiblePaint : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         CollectionManager.Instance.PlayerPaintInventory.CollectPaint(paintColor);
+        AudioManager.Instance.PlaySfx("SFX_Pickup", transform.position);
         Destroy(gameObject);
     }
 }

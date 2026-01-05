@@ -105,6 +105,8 @@ public class PlayerShootPaintball : MouseClickStrategy
             countMultiplier: paintballSizeMultiplier,
             spreadSpeedMultiplier: projectileSpeedMultiplier
         );
+
+        AudioManager.Instance.PlaySfx("PaintShoot", transform.position);
     }
 
     public void StartPowerUp(float projectileSpeed, float size, float effectRafius, 

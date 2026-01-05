@@ -25,6 +25,7 @@ public class PopupItem : MonoBehaviour
 
         gameObject.SetActive(true);
         routine = StartCoroutine(Run(duration, fadeOutSeconds, onDone));
+        AudioManager.Instance.PlaySfx("Popup", Camera.main.transform.position);
     }
 
     private IEnumerator Run(float duration, float fadeOutSeconds, System.Action<PopupItem> onDone)

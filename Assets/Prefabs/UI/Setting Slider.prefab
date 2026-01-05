@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4925818404728430647}
   - component: {fileID: 2540824660496001674}
   m_Layer: 5
-  m_Name: Mouse Sensitivity Slider
+  m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,8 +83,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 3739797120809652957}
   m_HandleRect: {fileID: 2006959410344649272}
   m_Direction: 0
-  m_MinValue: 0.1
-  m_MaxValue: 2
+  m_MinValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 1
   m_OnValueChanged:
@@ -398,9 +398,8 @@ GameObject:
   - component: {fileID: 9213049373499002299}
   - component: {fileID: 7558847744947095046}
   - component: {fileID: 1816989010777345448}
-  - component: {fileID: 4561596079102713646}
   m_Layer: 5
-  m_Name: Mouse Sensitivity
+  m_Name: Setting Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -454,7 +453,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mouse Sensitivity
+  m_text: 'text
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -525,16 +526,3 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &4561596079102713646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7490993205788030836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98f2faee4caf09a4aa681ab91e47e0ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UISensitivity
-  slider: {fileID: 2540824660496001674}

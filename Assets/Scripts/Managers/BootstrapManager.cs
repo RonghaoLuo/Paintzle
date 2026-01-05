@@ -22,7 +22,10 @@ public class BootstrapManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        
+    }
+
+    private void Start()
+    {
         LoadMainMenu();
     }
 
@@ -30,6 +33,7 @@ public class BootstrapManager : MonoBehaviour
     {
         SceneManager.LoadScene(mainMenuSceneIndex, LoadSceneMode.Additive);
         currentSceneIndex = mainMenuSceneIndex;
+        AudioManager.Instance.PlayMusic("bgm_mainmenu", true);
     }
 
     public void ReturnToMainMenu()
@@ -38,6 +42,7 @@ public class BootstrapManager : MonoBehaviour
         SceneManager.UnloadSceneAsync(currentSceneIndex);
         SceneManager.LoadSceneAsync(mainMenuSceneIndex, LoadSceneMode.Additive);
         currentSceneIndex = mainMenuSceneIndex;
+        AudioManager.Instance.PlayMusic("bgm_mainmenu", true);
     }
 
     public void StartGame()
@@ -46,6 +51,7 @@ public class BootstrapManager : MonoBehaviour
         currentSceneIndex = levelSceneIndex;
         SceneManager.UnloadSceneAsync(mainMenuSceneIndex);
         SceneManager.LoadSceneAsync(levelSceneIndex, LoadSceneMode.Additive);
+        AudioManager.Instance.PlayMusic("bgm_level_positive", true);
     }
 
     public void StartTest()
@@ -53,6 +59,7 @@ public class BootstrapManager : MonoBehaviour
         SceneManager.UnloadSceneAsync(mainMenuSceneIndex);
         SceneManager.LoadScene(testSceneIndex, LoadSceneMode.Additive);
         currentSceneIndex = testSceneIndex;
+        AudioManager.Instance.PlayMusic("bgm_level_positive", true);
     }
 
     public void RestartGame()
@@ -60,5 +67,6 @@ public class BootstrapManager : MonoBehaviour
         // Just reload Level1
         SceneManager.UnloadSceneAsync(currentSceneIndex);
         SceneManager.LoadSceneAsync(currentSceneIndex, LoadSceneMode.Additive);
+        AudioManager.Instance.PlayMusic("bgm_level_positive", true);
     }
 }

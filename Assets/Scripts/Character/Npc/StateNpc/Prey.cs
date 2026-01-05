@@ -21,7 +21,7 @@ public class Prey : WanderingNpc, IDefeatable
 
     private void GenerateDeathEffect()
     {
-
+        AudioManager.Instance.PlaySfx("PreyDefeat", transform.position);
     }
 
     private void DropItem()

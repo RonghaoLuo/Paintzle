@@ -16,5 +16,6 @@ public class PowerUp : MonoBehaviour, ICollectible
         playerCollect.StartPowerUP(jumpForceMultiplier, speedMultiplier, sizeMultiplier, effectRadiusMultiplier, 
             cooldownMultiplier, duration, shootRainbow);
         CollectionManager.Instance.DespawnPowerUp(this);
+        AudioManager.Instance.PlaySfx("SFX_Pickup_Powerup", transform.position);
     }
 }

@@ -53,6 +53,8 @@ public class Paintball : Projectile
             }
 
         }
+
+        AudioManager.Instance.PlaySfx("PaintHit", transform.position);
     }
 
     public override void OnPoolInitialize()
