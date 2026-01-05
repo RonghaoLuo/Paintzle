@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &49546116918648155
+--- !u!1 &9191340805164844896
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6314531149963305319}
-  - component: {fileID: 336726993781332961}
+  - component: {fileID: 5535779300553823855}
+  - component: {fileID: -6698487299770897597}
   m_Layer: 0
-  m_Name: Audio Manager
+  m_Name: Bake Tools
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6314531149963305319
+--- !u!4 &5535779300553823855
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 49546116918648155}
+  m_GameObject: {fileID: 9191340805164844896}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,23 +32,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &336726993781332961
+--- !u!114 &-6698487299770897597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 49546116918648155}
+  m_GameObject: {fileID: 9191340805164844896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9de250876cb390d40bc6ebf0e2df9ec3, type: 3}
+  m_Script: {fileID: 11500000, guid: b4a6af29936c48a4d942e12f9faa361d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  library: {fileID: 11400000, guid: 73285d3c2d3b11642af84fa40e609ce7, type: 2}
-  mixer: {fileID: 24100000, guid: a68cee5104e4ec64a8fe37a54cea1040, type: 2}
-  masterParam: MasterVol
-  musicParam: MusicVol
-  sfxParam: SfxVol
-  uiParam: UiVol
-  sfxPoolSize: 100
-  musicSource: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::BakeNeutralMaterialSwitcher
+  neutralMaterial: {fileID: 2100000, guid: 1e065720b98195047bd440470656ffca, type: 2}
+  filterByLayer: 0
+  layers:
+    serializedVersion: 2
+    m_Bits: 0
+  filterByTag: 0
+  requiredTag: Untagged
+  onlyStaticObjects: 1
+  includeInactive: 1
