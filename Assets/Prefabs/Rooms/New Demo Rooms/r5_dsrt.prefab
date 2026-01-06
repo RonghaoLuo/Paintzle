@@ -108,22 +108,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puzzle 5
       objectReference: {fileID: 0}
-    - target: {fileID: 4356077151960338858, guid: dc04b4877aefce941b0e583648b6e251, type: 3}
-      propertyPath: isPainted
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4356077151960338858, guid: dc04b4877aefce941b0e583648b6e251, type: 3}
-      propertyPath: paintCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6436835447871327431, guid: dc04b4877aefce941b0e583648b6e251, type: 3}
-      propertyPath: isPainted
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6436835447871327431, guid: dc04b4877aefce941b0e583648b6e251, type: 3}
-      propertyPath: paintCount
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7981002526433146285, guid: dc04b4877aefce941b0e583648b6e251, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -163,14 +147,6 @@ PrefabInstance:
     - target: {fileID: 7981002526433146285, guid: dc04b4877aefce941b0e583648b6e251, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150546514684186274, guid: dc04b4877aefce941b0e583648b6e251, type: 3}
-      propertyPath: isPainted
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150546514684186274, guid: dc04b4877aefce941b0e583648b6e251, type: 3}
-      propertyPath: paintCount
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

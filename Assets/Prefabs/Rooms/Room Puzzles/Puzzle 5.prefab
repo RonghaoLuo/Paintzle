@@ -368,7 +368,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: isPainted
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
+      propertyPath: paintCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7706604252950553404, guid: ddbe2b5c2487e724e8fd270baa25f9d4, type: 3}
       propertyPath: paintColour.b
@@ -406,15 +410,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5653679369480910947, guid: a93790baf35c03f4ebf2f0db1494d394, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.2255874
+      value: 5.4510617
       objectReference: {fileID: 0}
     - target: {fileID: 5653679369480910947, guid: a93790baf35c03f4ebf2f0db1494d394, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5653679369480910947, guid: a93790baf35c03f4ebf2f0db1494d394, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.909294
+      value: 11.089867
       objectReference: {fileID: 0}
     - target: {fileID: 5653679369480910947, guid: a93790baf35c03f4ebf2f0db1494d394, type: 3}
       propertyPath: m_LocalRotation.w
@@ -468,7 +472,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5648198726174752047, guid: a7f487beef05846459224465b0158ff7, type: 3}
       propertyPath: isPainted
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648198726174752047, guid: a7f487beef05846459224465b0158ff7, type: 3}
+      propertyPath: paintCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5648198726174752047, guid: a7f487beef05846459224465b0158ff7, type: 3}
       propertyPath: paintColour.b
@@ -632,7 +640,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5648198726174752047, guid: a7f487beef05846459224465b0158ff7, type: 3}
       propertyPath: isPainted
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648198726174752047, guid: a7f487beef05846459224465b0158ff7, type: 3}
+      propertyPath: paintCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5648198726174752047, guid: a7f487beef05846459224465b0158ff7, type: 3}
       propertyPath: paintColour.b
@@ -734,15 +746,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5653679369480910947, guid: a93790baf35c03f4ebf2f0db1494d394, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.67
+      value: 1.6700002
       objectReference: {fileID: 0}
     - target: {fileID: 5653679369480910947, guid: a93790baf35c03f4ebf2f0db1494d394, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5653679369480910947, guid: a93790baf35c03f4ebf2f0db1494d394, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.329208
+      value: 11.329208
       objectReference: {fileID: 0}
     - target: {fileID: 5653679369480910947, guid: a93790baf35c03f4ebf2f0db1494d394, type: 3}
       propertyPath: m_LocalRotation.w

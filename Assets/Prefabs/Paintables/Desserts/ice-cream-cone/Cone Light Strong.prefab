@@ -14,15 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6056304254936357465, guid: 0223bb2984e416b4d9a2d1aff604fdba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.40576
+      value: -4.78012
       objectReference: {fileID: 0}
     - target: {fileID: 6056304254936357465, guid: 0223bb2984e416b4d9a2d1aff604fdba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.980186
+      value: -17.74
       objectReference: {fileID: 0}
     - target: {fileID: 6056304254936357465, guid: 0223bb2984e416b4d9a2d1aff604fdba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.500164
+      value: 55.849987
       objectReference: {fileID: 0}
     - target: {fileID: 6056304254936357465, guid: 0223bb2984e416b4d9a2d1aff604fdba, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30,15 +30,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6056304254936357465, guid: 0223bb2984e416b4d9a2d1aff604fdba, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6056304254936357465, guid: 0223bb2984e416b4d9a2d1aff604fdba, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6056304254936357465, guid: 0223bb2984e416b4d9a2d1aff604fdba, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6056304254936357465, guid: 0223bb2984e416b4d9a2d1aff604fdba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -54,11 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8009779700131111876, guid: 0223bb2984e416b4d9a2d1aff604fdba, type: 3}
       propertyPath: m_Range
-      value: 25
+      value: 48.5
       objectReference: {fileID: 0}
     - target: {fileID: 8009779700131111876, guid: 0223bb2984e416b4d9a2d1aff604fdba, type: 3}
       propertyPath: m_Intensity
-      value: 50
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8009779700131111876, guid: 0223bb2984e416b4d9a2d1aff604fdba, type: 3}
       propertyPath: m_InnerSpotAngle
