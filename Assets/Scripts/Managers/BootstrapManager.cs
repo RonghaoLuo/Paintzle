@@ -1,14 +1,16 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class BootstrapManager : MonoBehaviour
 {
-    [SerializeField] private int currentSceneIndex;
     [SerializeField] private int mainMenuSceneIndex = 1;
     [SerializeField] private int levelSceneIndex = 2;
     [SerializeField] private int testSceneIndex = 3;
 
     public static BootstrapManager Instance;
+
+    private int currentSceneIndex = -1;
 
     private void Awake()
     {
@@ -26,47 +28,57 @@ public class BootstrapManager : MonoBehaviour
 
     private void Start()
     {
-        LoadMainMenu();
-    }
-
-    private void LoadMainMenu()
-    {
-        SceneManager.LoadScene(mainMenuSceneIndex, LoadSceneMode.Additive);
-        currentSceneIndex = mainMenuSceneIndex;
-        AudioManager.Instance.PlayMusic("bgm_mainmenu", true);
+        StartCoroutine(LoadSceneFlow(mainMenuSceneIndex, music: "bgm_mainmenu"));
     }
 
     public void ReturnToMainMenu()
     {
-        // Unload the current level scene and load the main menu again
-        SceneManager.UnloadSceneAsync(currentSceneIndex);
-        SceneManager.LoadSceneAsync(mainMenuSceneIndex, LoadSceneMode.Additive);
-        currentSceneIndex = mainMenuSceneIndex;
-        AudioManager.Instance.PlayMusic("bgm_mainmenu", true);
+        StartCoroutine(LoadSceneFlow(mainMenuSceneIndex, music: "bgm_mainmenu"));
     }
 
     public void StartGame()
     {
-        // Unload the menu and load Level1
-        currentSceneIndex = levelSceneIndex;
-        SceneManager.UnloadSceneAsync(mainMenuSceneIndex);
-        SceneManager.LoadSceneAsync(levelSceneIndex, LoadSceneMode.Additive);
-        AudioManager.Instance.PlayMusic("bgm_level_positive", true);
+        StartCoroutine(LoadSceneFlow(levelSceneIndex, music: "bgm_level_positive"));
     }
 
     public void StartTest()
     {
-        SceneManager.UnloadSceneAsync(mainMenuSceneIndex);
-        SceneManager.LoadScene(testSceneIndex, LoadSceneMode.Additive);
-        currentSceneIndex = testSceneIndex;
-        AudioManager.Instance.PlayMusic("bgm_level_positive", true);
+        StartCoroutine(LoadSceneFlow(testSceneIndex, music: "bgm_level_positive"));
     }
 
     public void RestartGame()
     {
-        // Just reload Level1
-        SceneManager.UnloadSceneAsync(currentSceneIndex);
-        SceneManager.LoadSceneAsync(currentSceneIndex, LoadSceneMode.Additive);
-        AudioManager.Instance.PlayMusic("bgm_level_positive", true);
+        // Reload whatever is currently active as gameplay
+        if (currentSceneIndex < 0) return;
+        StartCoroutine(LoadSceneFlow(currentSceneIndex, music: "bgm_level_positive"));
+    }
+
+    private IEnumerator LoadSceneFlow(int targetBuildIndex, string music)
+    {
+        // 1) Unload current (if any)
+        if (currentSceneIndex >= 0)
+        {
+            var unloadOp = SceneManager.UnloadSceneAsync(currentSceneIndex);
+            if (unloadOp != null)
+                yield return unloadOp;
+        }
+
+        // 2) Load target additively
+        var loadOp = SceneManager.LoadSceneAsync(targetBuildIndex, LoadSceneMode.Additive);
+        // Optional: ensure it activates when ready (default is true)
+        loadOp.allowSceneActivation = true;
+        yield return loadOp;
+
+        // 3) Set active scene to the newly loaded one (IMPORTANT for baked data consistency)
+        var loadedScene = SceneManager.GetSceneByBuildIndex(targetBuildIndex);
+        if (loadedScene.IsValid() && loadedScene.isLoaded)
+        {
+            SceneManager.SetActiveScene(loadedScene);
+        }
+
+        currentSceneIndex = targetBuildIndex;
+
+        // 4) Music
+        AudioManager.Instance.PlayMusic(music, true);
     }
 }
